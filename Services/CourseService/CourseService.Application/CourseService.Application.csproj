@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\LearnHub.Contracts\LearnHub.Contracts.csproj" />
     <ProjectReference Include="..\CourseService.Domain\CourseService.Domain.csproj" />
+    <ProjectReference Include="..\CourseService.Infrastructure\CourseService.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
