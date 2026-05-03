@@ -30,8 +30,8 @@ namespace AuthService.Application.Validators
 				.MaximumLength(200);
 
 			RuleFor(x => x.Role)
-				.Must(role => role == "Student" || role == "Instrustor").
-				WithMessage("Role must be either 'Student' or 'Instaructor'.");
+				.Must(role => role == "Student" || role == "Instructor").
+				WithMessage("Role must be either 'Student' or 'Instructor'.");
 		}
 	}
 }

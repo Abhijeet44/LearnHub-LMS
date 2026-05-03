@@ -23,7 +23,7 @@ namespace CourseService.Domain.Entities
 		public bool IsFree { get; private set; }
 		public CourseLevel Level { get; private set; }
 		public CourseStatus Status { get; private set; }
-		public string RejectionReason { get; private set; } = string.Empty;
+		public string? RejectionReason { get; private set; }
 		public string Language { get; private set; } = "English";
 		public int TotalDurationSeconds { get; private set; }
 		public DateTime CreatedAt { get; private set; }
@@ -96,7 +96,7 @@ namespace CourseService.Domain.Entities
 			if (Status != CourseStatus.Draft && Status != CourseStatus.Rejected)
 				throw new InvalidOperationException("Only courses in draft or rejected status can be submitted for review.");
 
-			if (!Sections.Any() || Sections.Any(s => s.Lessons.Any()))
+			if (!Sections.Any() || !Sections.Any(s => s.Lessons.Any()))
 				throw new InvalidOperationException("Course must have at least one section with lessons before submitting for review.");
 
 			Status = CourseStatus.UnderReview;

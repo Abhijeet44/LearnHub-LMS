@@ -10,7 +10,7 @@ using Azure.Storage.Blobs.Models;
 
 namespace CourseService.Application.Services
 {
-	internal class AzureBlobStorageService : IBlobStorageService
+	public class AzureBlobStorageService : IBlobStorageService
 	{
 		private readonly BlobServiceClient _blobServiceClient;
 

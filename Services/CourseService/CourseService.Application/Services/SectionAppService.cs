@@ -46,8 +46,8 @@ namespace CourseService.Application.Services
 			// create course section
 			var section = Section.Create(courseId, request.Title, orderIndex);
 
-			await _courseRepository.AddAsync(course, ct);
-			await _courseRepository.SaveChangesAsync(ct);
+			await _sectionRepository.AddAsync(section, ct);
+			await _sectionRepository.SaveChangesAsync(ct);
 
 			return CourseMapper.ToSectionDto(section);
 		}

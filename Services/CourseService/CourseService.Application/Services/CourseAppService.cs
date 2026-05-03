@@ -179,7 +179,7 @@ namespace CourseService.Application.Services
 
 		public async Task SubmitForReviewAsync(Guid courseId, Guid instructorId, CancellationToken ct = default)
 		{
-			var course = _courseRepository.GetByIdAsync(courseId, ct).Result 
+			var course = await _courseRepository.GetByIdAsync(courseId, ct) 
 				?? throw new CourseNotFoundException(courseId);
 
 			if (course.InstructorId != instructorId)

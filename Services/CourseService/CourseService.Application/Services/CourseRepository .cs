@@ -1,12 +1,12 @@
 ﻿using CourseService.Application.DTOs.Request;
 using CourseService.Application.Interfaces;
+using CourseService.Application.Services;
 using CourseService.Domain.Entities;
 using CourseService.Domain.Enum;
 using CourseService.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using static MassTransit.Logging.OperationName;
-
 
 namespace CourseService.Application.Services
 {
